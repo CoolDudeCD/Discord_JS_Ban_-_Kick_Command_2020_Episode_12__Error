@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-const config = require('./config.json') // when running with heroku, disable this with "command+/". Then enable client.login(process.env.DJS_TOKEN), and disable client.login(config.token)
+const config = require('./config.json')
 const command = require('./command')
 const firstMessage = require('./first-message')
 const privateMessage = require('./private-message')
@@ -248,6 +248,4 @@ client.on('ready', () => {
 
 
 
-// client.login(process.env.DJS_TOKEN)
 client.login(config.token)
-4
